@@ -16,7 +16,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.http import HttpResponse
+
+def gambiarra(request):
+    return HttpResponse('eu sou lindo')
+def raiz(request):
+    return HttpResponse('raiz do site')
+def pagina2(request):
+    return HttpResponse('eu realmente sou muito lindo')
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('sobre/', gambiarra),
+    path('', raiz ),
+    path('eusoulindo/',pagina2)
 ]
