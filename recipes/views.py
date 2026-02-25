@@ -8,3 +8,4 @@ def raiz(request):
     return HttpResponse('raiz do meu lindo site')
 def pagina2 (request):
     return HttpResponse('pagina 2 do meu site')
+
