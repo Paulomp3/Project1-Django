@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 # Create your views here.
 def gambiarra(request):
-    return HttpResponse('eu sou lindo')
+    return render(request, 'gambiarra.html')
 def raiz(request):
     return HttpResponse('raiz do meu lindo site')
 def pagina2 (request):
