@@ -5,7 +5,7 @@ from django.http import HttpResponse
 def gambiarra(request):
     return render(request, 'gambiarra.html')
 def raiz(request):
-    return HttpResponse('raiz do meu lindo site')
+    return render(request, 'gambiarra2.html')
 def pagina2 (request):
     return HttpResponse('pagina 2 do meu site')
 
