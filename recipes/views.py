@@ -7,9 +7,9 @@ def pagina3(request):
         'nome': 'denise silva de carvalho vasconcelos '
     })
 def pagina1(request):
-    return render(request, 'recipes/pagina1.html', context={
-        'nome': 'antonio silva de carvalho vasconcelos'
-    })
+    dados = 'eu sou muito lindo slk'
+    context = {'chave': dados}
+    return render(request, 'recipes/pagina1.html',context)
 def pagina2 (request):
     return render(request,'recipes/pagina2.html', context = {
         'nome': 'paulo silva de carvalho vasconcelos'
