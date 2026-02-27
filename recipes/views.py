@@ -2,10 +2,16 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 # Create your views here.
-def gambiarra(request):
-    return render(request, 'recipes/gambiarra.html')
-def raiz(request):
-    return render(request, 'global/gambiarra2.html')
+def pagina3(request):
+    return render(request, 'recipes/pagina3.html', context= {
+        'nome': 'denise silva de carvalho vasconcelos '
+    })
+def pagina1(request):
+    return render(request, 'recipes/pagina1.html', context={
+        'nome': 'antonio silva de carvalho vasconcelos'
+    })
 def pagina2 (request):
-    return HttpResponse('pagina 2 do meu site')
+    return render(request,'recipes/pagina2.html', context = {
+        'nome': 'paulo silva de carvalho vasconcelos'
+    })
 

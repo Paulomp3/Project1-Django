@@ -1,9 +1,9 @@
 from django.urls import path
-from recipes.views import gambiarra,raiz,pagina2 
+from recipes.views import pagina3,pagina1,pagina2 
 
 urlpatterns = [
 
-    path('sobre/', gambiarra),
-    path('', raiz ),
+    path('pagina3/', pagina3),
+    path('', pagina1 ),
     path('pagina2/',pagina2)
 ]
