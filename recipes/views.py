@@ -1,10 +1,10 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+
 
 # Create your views here.
-def pagina1(request):
+def home(request):
     dados = 'eu sou muito lindo slk'
     context = {'chave': dados}
-    return render(request, 'recipes/pagina1.html',context)
+    return render(request, 'recipes/home.html',context)
 
 
