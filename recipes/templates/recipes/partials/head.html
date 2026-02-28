@@ -3,11 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- link do font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Receitas do Paulo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"><!--link da fonte principal do projeto-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap" rel="stylesheet">
+
+
+    <title>Receitas</title>
 </head>
 <style>
     :root {
@@ -51,6 +57,7 @@
         --font-primary: sans-serif;
         --font-headings: 'Roboto Slab', serif;
 
+        --spacing-gutter-low: 2rem;
         --spacing-gutter-medium: 3rem;
         --spacing-gutter-large: 4rem;
     }
@@ -65,7 +72,7 @@
     }
 
     html {
-        font-size: 62.5;
+        font-size: 90.5%;
         /*tamanho da fonte*/
     }
 
@@ -73,24 +80,110 @@
         font-size: 1.6rem;
         /*tamanho da fonte*/
         font-family: var(--font-primary);
+        /*tipo da fonte*/
+        background-color: var(--color-gray-1);
+    }
 
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: var(--font-headings)
+            /*tipo da fonte para todos variaveis H*/
     }
 
     .main-header-container {
         /*container principal do header do nosso projeto*/
         background: var(--color-primary-dark-hover);
+        /*cor do container principal*/
     }
 
     .header-container {
         max-width: 108rem;
+        /*tamanho total da nossa largura*/
         background: var(--color-primary-dark-hover);
+        /*cor do sub-container do header*/
         margin: 0 auto;
-
+        /*altura */
+        padding: var(--spacing-gutter-low);
     }
 
     .main-logo {
         font-size: 2rem;
+        /*tamanho da fonte do nosso header*/
         color: var(--color-gray-0);
+        /*cor da fonte do nosso header*/
         text-decoration: none;
+        /*tirando o link que colocamos dentro de receitas*/
+        display: flex;
+        /*flexidade para o conteudo*/
+        flex-flow: row nowrap;
+        /*ajustes*/
+        align-items: center;
+        /*alinhamento ao centro*/
+        justify-content: center;
+        /*alinhamento do conteudo*/
+        width: fit-content;
+        /*para alterar o tamannho do nosso container*/
+        margin: 0 auto;
+        /*zerar os espaçamentos e assim ficar ajustado*/
     }
+
+    .main-logo-icon {
+        margin-right: 0.4rem;
+        /*definir o tamanho entre o icone e o texto*/
+    }
+
+
+    /*Areá de busca*/
+
+    .search-form {
+        border: .2rem solid var(--color-primary-dark);
+        max-width: 50rem;
+        margin: 2rem auto;
+        border-radius: .4rem;
+        position: relative;
+        transition: all 200ms ease-in-out;
+    }
+
+    .search-form:focus-within {
+        border-color: var(--color-debug-dark);
+        background-color: var(--color-white);
+
+    }
+
+    .search-form:focus-within .search-button {
+        color: var(--color-debug-dark);
+    }
+
+    .search-input {
+        width: 97%;
+    }
+
+    .search-button {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .search-button:focus {
+        outline: 1px solid var(--color-primary-hover);
+        background: rgba(0, 0, 0, .9);
+    }
+
+
+    .search-input,
+    .search-button {
+        border: none;
+        background: none;
+        outline: none;
+        padding: 1rem;
+        transition: all 200ms ease-in-out;
+    }
+
+
+
+    /*Fim da aréa de busca*/
 </style>

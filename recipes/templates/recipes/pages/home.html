@@ -1,16 +1,15 @@
-{% include "recipes/partials/head.html" %}
+{% include "recipes/partials/head.html" %}<!--código do head da pagina-->
+
 
 <body>
-    <header class="main-header-container">
-        <div class="header-container">
-            <h2>
-                <a class='main-logo'href="https://www.amazon.com.br/ref=nav_logo">
-                    <i class="fa-brands fa-rebel"></i></i>
-                    <span>Receitas {{chave}}</span>
-                </a>
-            </h2>
+    {%include "recipes/partials/header.html"%}<!--código do header da nossa página-->
+    <div class="search-container">
+        <div class="s-container">
+            <form action=""class="search-form">
+                <input type="search" class="search-input" name="search">
+                <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
+            </form>
         </div>
-    </header>
+    </div>
 </body>
-
 </html>
