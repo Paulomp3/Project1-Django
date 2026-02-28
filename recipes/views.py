@@ -5,6 +5,6 @@ from django.shortcuts import render
 def home(request):
     dados = 'eu sou muito lindo slk'
     context = {'chave': dados}
-    return render(request, 'recipes/home.html',context)
+    return render(request, 'recipes/pages/home.html',context)
 
 
