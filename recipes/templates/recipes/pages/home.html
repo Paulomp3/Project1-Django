@@ -3,13 +3,14 @@
 
 <body>
     {%include "recipes/partials/header.html"%}<!--código do header da nossa página-->
-    <div class="search-container">
-        <div class="s-container">
-            <form action=""class="search-form">
-                <input type="search" class="search-input" name="search">
-                <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
-            </form>
+    {%include "recipes/partials/search.html"%}<!--código do search da pagina-->
+     <main class="main-content-container">
+        <div class="main-content main-content-list container">
+            {%include "recipes/partials/recipe.html"%}<!--código do container de recipe da página-->
+
         </div>
-    </div>
+
+     </main>
+     {%include "recipes/partials/footer.html"%}   
 </body>
 </html>
