@@ -286,3 +286,16 @@
     .main-footer a:hover {
         filter: brightness(.8);
     }
+    .recipe-list-item {
+        max-width: 50rem;
+    }
+
+    .main-content-detail  .recipe-list-item {
+        max-width: 50rem;
+        margin: 0 auto;
+    }
+
+    .main-content-detail .recipe-list-item:hover {
+        transform: scale(1);
+        box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.25);
+    }
