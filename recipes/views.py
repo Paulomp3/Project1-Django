@@ -1,18 +1,17 @@
 from django.shortcuts import render
 from utils.recipes.factory import make_recipe
 
-
 # Create your views here.
 def home(request):
-    dados = 'eu sou muito lindo slk'
-    context = {'chave': dados}
-    return render(request, 'recipes/pages/home.html',context)
+    return render(request, 'recipes/pages/home.html', context={
+        'recipes': [make_recipe() for i in range(10)]
+    })
 def recipes(request):
-    dados = 'eu sou muito lindo slk'
-    context = {'chave': dados}
-    return render(request, 'recipes/pages/home.html',context)
+    return render(request, 'recipes/pages/home.html',context={
+        'recipes': [make_recipe() for i in range(10)]
+    })
 def recipes2(request, id):
-    dados = 'eu sou muito lindo slk'
-    context = {'chave': dados}
-    return render(request,'recipes/pages/recipe-view.html',context)
+    return render(request,'recipes/pages/recipe-view.html',context={
+        'recipe': make_recipe()
+    })
 
