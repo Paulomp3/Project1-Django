@@ -1,9 +1,7 @@
-{% include "recipes/partials/head.html" %}<!--código do head da pagina-->
-<body>
-    {%include "recipes/partials/header.html"%}<!--código do header da nossa página-->
-    {%include "recipes/partials/search.html"%}<!--código do search da pagina-->
-     <main class="main-content-container">
-        <div class="main-content main-content-list container">
+{% extends "global/base.html" %}
+{% block title %} Home | {% endblock title %}
+{% block content %}
+       <div class="main-content main-content-list container">
             {%include "recipes/partials/recipe.html"%}
             {%include "recipes/partials/recipe.html"%}
             {%include "recipes/partials/recipe.html"%}
@@ -11,7 +9,4 @@
             {%include "recipes/partials/recipe.html"%}
             {%include "recipes/partials/recipe.html"%}
         </div>
-     </main>
-     {%include "recipes/partials/footer.html"%}<!--código do footer da página-->
-</body>
-</html>
+{% endblock content %}

@@ -1,0 +1,14 @@
+<doctype html>   
+    <head>
+        <title> {% block title %}{% endblock title %} Receitas</title> <!-- título da página -->
+    </head>
+    {% include "recipes/partials/head.html" %}<!--código do head da pagina-->
+    <body>
+        {%include "recipes/partials/header.html"%}<!--código do header da nossa página-->
+        {%include "recipes/partials/search.html"%}<!--código do search da pagina-->
+        <main class="main-content-container">
+            {% block content %}{% endblock content %}
+        </main>
+         {%include "recipes/partials/footer.html"%}<!--código do footer da página-->
+    </body>
+</html>
