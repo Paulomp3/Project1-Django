@@ -12,6 +12,7 @@ def recipes(request):
     })
 def recipes2(request, id):
     return render(request,'recipes/pages/recipe-view.html',context={
-        'recipe': make_recipe()
+        'controle': make_recipe(),
+        
     })
 
