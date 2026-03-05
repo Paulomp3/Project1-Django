@@ -41,11 +41,19 @@
                         </div>
                     </div>
                 </div>
+                    
 
+              {% if detail_page is not True  %}
                 <footer class="recipe-footer">
                     <a class="recipe-read-more button button-dark button-full-width" href="/recipes/3/">
                         <i class="fas fa-eye"></i>
                         <span>ver mais...</span>
                     </a>
                 </footer>
+                {%else%}
+                 <span class="recipe-preparation-steps">
+                    <h3 class="recipe-meta-title"><i class="fas fa-utensils"></i> Modo de preparo</h3>
+                    {{controle.preparation_steps |linebreaksbr}}
+                 </span>
+              {% endif %}
             </div>

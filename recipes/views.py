@@ -13,6 +13,7 @@ def recipes(request):
 def recipes2(request, id):
     return render(request,'recipes/pages/recipe-view.html',context={
         'controle': make_recipe(),
+        'detail_page': True,
         
     })
 
