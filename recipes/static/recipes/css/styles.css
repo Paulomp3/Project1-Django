@@ -212,6 +212,10 @@
         padding: var(--spacing-gutter-low);
         padding-bottom: 2rem;
     }
+    .recipe-title-container a  {
+        text-decoration: none;
+        color: var(--color-primary-dark-hover);
+    }
 
     .recipe-author {
         padding: 0 var(--spacing-gutter-low);
